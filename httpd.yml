@@ -1,0 +1,8 @@
+---
+ - hosts: redhat
+   become: yes
+   tasks:
+    - name: installing httpd
+      yum:
+       name: httpd
+       state: present
