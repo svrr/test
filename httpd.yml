@@ -6,3 +6,11 @@
       yum:
        name: httpd
        state: present
+    - name: deployment
+      copy: 
+       src: ~/index.html
+       dest: /var/www/html
+    - name: service restart
+      service:
+       name: httpd
+       state: restarted
